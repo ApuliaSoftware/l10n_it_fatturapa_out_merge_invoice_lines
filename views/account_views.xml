@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="use_line_details_invoice_form" model="ir.ui.view">
+        <field name="name">use.line.details.invoice.form</field>
+        <field name="model">account.invoice</field>
+        <field name="inherit_id" ref="account.invoice_form"/>
+        <field name="arch" type="xml">
+            <field name="invoice_line_ids" position='before'>
+                <label for="use_line_details" string="Use line details" class="oe_inline" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                <field name="use_line_details" widget="boolean_toggle" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+            </field>
+            <xpath expr="//field[@name='invoice_line_ids']/tree/field[@name='product_id']" position="before">
+                <field name="is_details" widget="boolean_toggle" attrs="{'readonly': [('parent.state', '!=', 'draft')]}"/>    
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
