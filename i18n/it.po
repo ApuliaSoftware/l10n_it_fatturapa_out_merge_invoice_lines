@@ -1,0 +1,59 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* l10n_it_fatturapa_out_merge_invoice_lines
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-07-13 14:11+0000\n"
+"PO-Revision-Date: 2021-07-13 14:11+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: l10n_it_fatturapa_out_merge_invoice_lines
+#: model:ir.model,name:l10n_it_fatturapa_out_merge_invoice_lines.model_wizard_export_fatturapa
+msgid "Export E-invoice"
+msgstr "Esporta e-fattura"
+
+#. module: l10n_it_fatturapa_out_merge_invoice_lines
+#: model_terms:ir.ui.view,arch_db:l10n_it_fatturapa_out_merge_invoice_lines.use_line_details_invoice_form
+msgid "If active, each line activated like detail will show in invoice without unit price and subtotal.                  All details line will merge in one final line with sum of subtotal"
+msgstr "Se attivo, ogni riga attivata come dettaglio comparirà in fattura senza prezzo unitario e subtotale.\nTutte le righe dei dettagli si fonderanno in un'ultima riga con la somma del subtotale"
+
+#. module: l10n_it_fatturapa_out_merge_invoice_lines
+#: model:ir.model,name:l10n_it_fatturapa_out_merge_invoice_lines.model_account_invoice
+msgid "Invoice"
+msgstr "Fattura"
+
+#. module: l10n_it_fatturapa_out_merge_invoice_lines
+#: model:ir.model,name:l10n_it_fatturapa_out_merge_invoice_lines.model_account_invoice_line
+msgid "Invoice Line"
+msgstr "Riga fattura"
+
+#. module: l10n_it_fatturapa_out_merge_invoice_lines
+#: model:ir.model.fields,field_description:l10n_it_fatturapa_out_merge_invoice_lines.field_account_invoice_line__is_details
+msgid "Is Details"
+msgstr "è un dettaglio"
+
+#. module: l10n_it_fatturapa_out_merge_invoice_lines
+#: code:addons/l10n_it_fatturapa_out_merge_invoice_lines/wizard/wizard_export_fatturapa.py:84
+#: code:addons/l10n_it_fatturapa_out_merge_invoice_lines/wizard/wizard_export_fatturapa.py:129
+#, python-format
+msgid "No 'nature' field for tax %s."
+msgstr ""
+
+#. module: l10n_it_fatturapa_out_merge_invoice_lines
+#: model:ir.model.fields,field_description:l10n_it_fatturapa_out_merge_invoice_lines.field_account_invoice__use_line_details
+msgid "Use Line Details"
+msgstr "Usa righe come dettaglio"
+
+#. module: l10n_it_fatturapa_out_merge_invoice_lines
+#: model_terms:ir.ui.view,arch_db:l10n_it_fatturapa_out_merge_invoice_lines.use_line_details_invoice_form
+msgid "Use line details"
+msgstr "Usa righe come dettaglio"
+

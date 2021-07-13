@@ -8,7 +8,9 @@
         <field name="arch" type="xml">
             <field name="invoice_line_ids" position='before'>
                 <label for="use_line_details" string="Use line details" class="oe_inline" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
-                <field name="use_line_details" widget="boolean_toggle" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                <field name="use_line_details" widget="boolean_toggle" attrs="{'readonly': [('state', '!=', 'draft')]}" 
+                help="If active, each line activated like detail will show in invoice without unit price and subtotal. 
+                All details line will merge in one final line with sum of subtotal"/>
             </field>
             <xpath expr="//field[@name='invoice_line_ids']/tree/field[@name='product_id']" position="before">
                 <field name="is_details" widget="boolean_toggle" attrs="{'readonly': [('parent.state', '!=', 'draft')]}"/>    
