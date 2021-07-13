@@ -70,7 +70,7 @@ class WizardExportFatturapa(models.TransientModel):
         prezzo_tot = sum_subt
         DettaglioLinea = DettaglioLineeType(
             NumeroLinea=str(line_no),
-            Descrizione=encode_for_export('VALORE COMPLESSIVO DETTAGLI', 1000),
+            Descrizione=encode_for_export('VALORE COMPLESSIVO', 1000),
             PrezzoUnitario='{prezzo:.{precision}f}'.format(
                 prezzo=prezzo_unitario, precision=price_precision),
             Quantita='{qta:.{precision}f}'.format(
