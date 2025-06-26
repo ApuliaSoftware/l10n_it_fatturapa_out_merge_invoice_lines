@@ -163,3 +163,13 @@ class WizardExportFatturapa(models.TransientModel):
                 DettaglioLinea.CodiceArticolo.append(CodiceArticolo)
         body.DatiBeniServizi.DettaglioLinee.append(DettaglioLinea)
         return DettaglioLinea
+
+    def _get_prezzo_unitario(self, line):
+        res = line.price_unit
+        if (
+            line.invoice_line_tax_ids and
+            line.invoice_line_tax_ids[0].price_include
+        ):
+            res = line.price_unit / (
+                1 + (line.invoice_line_tax_ids[0].amount / 100))
+        return res
