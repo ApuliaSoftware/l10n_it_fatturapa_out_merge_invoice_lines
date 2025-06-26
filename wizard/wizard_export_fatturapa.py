@@ -172,4 +172,5 @@ class WizardExportFatturapa(models.TransientModel):
         ):
             res = line.price_unit / (
                 1 + (line.invoice_line_tax_ids[0].amount / 100))
+        print("res: {}".format(res))
         return res
